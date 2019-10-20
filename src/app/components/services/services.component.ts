@@ -16,6 +16,10 @@ export class ServicesComponent implements OnInit {
   savings = ['0-10%', '10-20%', '20-30%', 'More than 30%'];
   userModel = new User('Sai', 19, 15000, 'short', 'More than 30%', 'high', true);
 
-  ngOnInit() {}
+  onSubmit() {
+    console.log(this.userModel);
+  }
+
+  ngOnInit(){}
 
 }

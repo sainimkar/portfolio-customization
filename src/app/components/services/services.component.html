@@ -1,6 +1,6 @@
 <div class="container" style="align-items: center;">
     <h2 style="margin-top: 20px;">Enter your Details</h2>
-    <form #userForm="ngForm" novalidate>
+    <form #userForm="ngForm" (ngsubmit)="onSubmit()" novalidate>
         
         {{ userForm.value | json  }}
 
@@ -45,7 +45,7 @@
             </label>
         </div>
 
-        <Button class="btn-danger" style="padding: 10px;">Submit</Button>
+        <Button class="btn-danger" style="padding: 10px;" name="submit" type="submit" (click)=onSubmit()>Submit</Button>
 
     </form>
 </div>
