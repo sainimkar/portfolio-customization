@@ -40,7 +40,7 @@ export class CosmicServiceService {
     })
   }
 
-  //send message
+  // send message
   sendMessage(data: any)
   {
     return this._http.post(config.url + config.bucket_slug + "/add-object/",{

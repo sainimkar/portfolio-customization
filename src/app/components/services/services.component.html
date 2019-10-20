@@ -1,30 +1,51 @@
-<div class="container margin-tp">
+<div class="container" style="align-items: center;">
+    <h2 style="margin-top: 20px;">Enter your Details</h2>
+    <form #userForm="ngForm" novalidate>
+        
+        {{ userForm.value | json  }}
 
-<div class="row">
-<div class="col-md-6"><img src="assets/services/web-development.jpg" height=400px width=400px></div>
+    <hr/>
 
-<div class="col-md-6">
-<div style="margin-top: 60px"><h1>Web Development</h1><br>
+        {{ userModel | json }}
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" name="name" class="form-control" [(ngModel)] = "userModel.name">
+        </div>
+        <div class="form-group">
+            <label>Age</label>
+            <input type="number" name="age" class="form-control" [(ngModel)] = "userModel.age">
+        </div>
+        <div class="form-group">
+            <label>Household income</label>
+            <input type="number" name="income" class="form-control" [(ngModel)] = "userModel.income">
+        </div>
+        <div class="form-group">
+            <select class="custom-select" name="term" [(ngModel)] = "userModel.term">
+                <option value="">Investment term</option>
+                <option *ngFor="let term of terms">{{ term }}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <select class="custom-select" name="savings"  [(ngModel)] = "userModel.savings">
+                <option value="">Income Savings</option>
+                <option *ngFor="let saving of savings">{{ saving }}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <select class="custom-select" name="risk" [(ngModel)] = "userModel.risk">
+                <option value="">Risk Tolerance</option>
+                <option *ngFor="let risk of risk">{{ risk }}</option>
+            </select>
+        </div>
 
-  <div [innerHTML]=firstPara></div>
+        <div class="form-check mb-3">
+            <input class="form-check-input" name="condition" type="checkbox" [(ngModel)] = "userModel.agree" >
+            <label class="form-check-label">
+                Our recommendations rely on historical data. Historical performance is not a guarantee of future returns.
+            </label>
+        </div>
 
+        <Button class="btn-danger" style="padding: 10px;">Submit</Button>
+
+    </form>
 </div>
-</div>
-
-<div class="row">
-  <div class="col-md-6" style="margin-top: 60px"><h1>SEO</h1>
-    <br>
-    <div [innerHTML]=secondPara></div>
-    
-</div>
-
-<div class="col-md-6">
-  <img src="assets/services/seo-services.png" height=400px width=400px style="float:right">
-</div>
-</div>
-
-  </div>
-
-  <div class="overlay"   [ngClass]="{'is-visible': showLoader,'is-invisible': !showLoader}">
-    <div id="loader" ></div>
-    </div>

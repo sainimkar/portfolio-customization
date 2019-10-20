@@ -22,7 +22,7 @@ export class ContactComponent implements OnInit {
     }); 
   }
 
-  ngOnInit() {    
+  ngOnInit() {
 
   }
 
@@ -33,7 +33,7 @@ export class ContactComponent implements OnInit {
     this.cosmicService.sendMessage(this.clientData)
     .subscribe((res)=>{
       this.showLoader = false;
-      this.submitMessage = "  Message sent successfully!"
+      this.submitMessage = "Message sent successfully!"
       setTimeout(()=>{  this.submitMessage = '' }, 5000);
     })
   }
