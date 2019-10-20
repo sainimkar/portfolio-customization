@@ -4,12 +4,17 @@ import { CosmicServiceService } from './../../services/cosmic-service.service';
 import { FormsModule, FormBuilder, FormGroup, FormControl, Validators} from '@angular/forms';
 import { User } from 'src/app/user';
 
+
 @Component({
   selector: 'app-services',
   templateUrl: './services.component.html',
   styleUrls: ['./services.component.css']
 })
 export class ServicesComponent implements OnInit {
+
+  // tslint:disable-next-line: typedef-whitespace
+  // tslint:disable-next-line: variable-name
+  constructor(private _service: CosmicServiceService){}
 
   terms = ['short', 'intermediate', 'long'];
   risk = ['low', 'moderate', 'high'];
@@ -18,6 +23,12 @@ export class ServicesComponent implements OnInit {
 
   onSubmit() {
     console.log(this.userModel);
+
+    this._service.clientData(this.userModel)
+          .subscribe(
+            data => console.log('success', data),
+            error => console.error('Error!', error )
+        );
   }
 
   ngOnInit(){}

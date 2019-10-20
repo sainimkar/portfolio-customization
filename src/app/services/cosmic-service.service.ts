@@ -1,16 +1,25 @@
 import { Injectable } from '@angular/core';
 import { config } from './../../config/config';
 import { HttpClient } from '@angular/common/http';
+import { User } from '../user';
 
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class CosmicServiceService {
+
+  _url = '';
 
   constructor(private _http: HttpClient) { }
 
-  //getting data for home component
+  clientData(user: User)
+  {
+    return this._http.post<any>(this._url, user);
+  }
+
+  // getting data for home component
   getHomeData()
   {
     return this._http.get(config.url + config.bucket_slug + "/object-type/homes", {
