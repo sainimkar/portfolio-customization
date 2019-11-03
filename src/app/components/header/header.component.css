@@ -1,10 +1,19 @@
-.jumbotron {
-    /* background: url(/assets/header.jpeg) no-repeat center top; */
-    background: #363636e7;
-    background-size:cover;
-    border-radius: 0;
-    margin-bottom:0;
+
+
+  #nav {
+    background: transparent;
   }
+
+  .myClass {
+    height: 40vh;
+    margin-left: -15px;
+    margin-right: -20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url('http://www.wits.ac.za/media/wits-university/course-finder-images/mathematics-finance.png');
+  }
+
   .jumbotron h1 {
     font-size: 3.5rem;
     font-weight: 300;
@@ -19,14 +28,17 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
+    color: black;
     overflow: hidden;
-    background-color: #333333;
+    margin-left: -15px;
+    margin-right: -15px;
   }
-  
+
   li {
     float: left;
+    margin: 5px;
   }
-  
+
   li span {
     display: block;
     color: white;
@@ -34,7 +46,7 @@
     padding: 16px;
     text-decoration: none;
   }
-  
+
   li span:hover {
     background-color: #111111;
     cursor: pointer
