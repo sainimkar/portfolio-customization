@@ -16,10 +16,8 @@ export class ServicesComponent implements OnInit {
   // tslint:disable-next-line: variable-name
   constructor(private _service: CosmicServiceService){}
 
-  terms = ['short', 'intermediate', 'long'];
-  risk = ['low', 'moderate', 'high'];
-  savings = ['0-10%', '10-20%', '20-30%', 'More than 30%'];
-  userModel = new User('Sai', 19, 15000, 'short', 'More than 30%', 'high', true);
+
+  userModel = new User( 20 , 1,  15000, 5000, 5000);
 
   onSubmit() {
     console.log(this.userModel);

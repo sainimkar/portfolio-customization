@@ -1,7 +1,34 @@
-<div class="container" style="align-items: center;">
+<div class="container" style="align-items: center">
+    <div class="text-center" id="header">TELL US ABOUT YOURSELF</div>
+    <div class="text-center" id="intro">Welcome to Portfolio Customization. To find the portfolio that best suits your needs, we need a little bit of information from you first. How may we help you?</div>
+
+    <div class="text-center" id="form">
+        <form #userForm="ngForm" (ngsubmit)="onSubmit()" novalidate>
+
+            <div class="form-group" id="form">
+                <p style="display: block" id="para">I am
+                <input type="text" name="age" class="form-control " [(ngModel)] = "userModel.age" id="input-age">
+                years old and I have
+                <input type="text" name="dependents" class="form-control " [(ngModel)] = "userModel.dependents" id="input-dependents">
+                dependents or family members. My salary is <br>
+                <input type="text" name="salary" class="form-control " [(ngModel)] = "userModel.salary" id="input-salary">
+                Out of which I save
+                <input type="text" name="savings" class="form-control " [(ngModel)] = "userModel.savings" id="input-savings">
+                and my expense is
+                <input type="text" name="expense" class="form-control " [(ngModel)] = "userModel.expense" id="input-expense">
+            </p>
+            </div>
+            <Button class="btn-danger" style="padding: 5px; background-color: #dc3545;" name="submit" type="submit" (click)=onSubmit()>Submit</Button>
+
+        </form>
+    </div>
+
+</div>
+
+<!--<div class="container" style="align-items: center;">
     <h2 style="margin-top: 20px;">Enter your Details</h2>
     <form #userForm="ngForm" (ngsubmit)="onSubmit()" novalidate>
-        
+
         {{ userForm.value | json  }}
 
     <hr/>
@@ -48,4 +75,4 @@
         <Button class="btn-danger" style="padding: 10px;" name="submit" type="submit" (click)=onSubmit()>Submit</Button>
 
     </form>
-</div>
+</div>-->

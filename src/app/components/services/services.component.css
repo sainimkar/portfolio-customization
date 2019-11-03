@@ -1,0 +1,85 @@
+.container {
+    margin-top: 20px;
+}
+
+#header {
+    margin-top: 30px;
+    font-family: Roboto;
+    font-size: 20px;
+    align-content: center;
+    line-height: 1.42857;
+    color:#423d3b;
+}
+
+#intro {
+    margin-top: 30px;
+    font-family: Roboto;
+    font-size: 15px;
+    align-content: center;
+    line-height: 1.42857;
+    color: #948e8e;
+}
+
+input.transparent-input{
+    background-color:transparent !important;
+    border:none !important;
+    width: 20px;
+ }
+
+ #form {
+    text-overflow: ellipsis;
+overflow: hidden;
+white-space: nowrap;
+ }
+
+ #input-age {
+    display: inline-block;
+    border:none !important;
+    color: #948e8e;
+    width: 45px;
+    padding: 5px;
+    margin: 5px;
+ }
+
+ #input-dependents {
+    display: inline-block;
+    color: #948e8e;
+    border:none !important;
+    width: 35px;
+ }
+
+ #input-savings {
+    display: inline-block;
+    border:none !important;
+    width: 65px;
+    color: #948e8e;
+    padding: 5px;
+    margin-top: 0px;
+ }
+
+ #input-salary {
+    display: inline-block;
+    border:none !important;
+    width: 60px;
+    padding: 5px;
+    color: #948e8e;
+    margin-top: 0px;
+ }
+
+ #input-expense {
+    display: inline-block;
+    border:none !important;
+    width: 60px;
+    color: #948e8e;
+    padding: 5px;
+    margin-top: 0px;
+ }
+
+ #para {
+    margin-top: 30px;
+    font-family: Roboto;
+    font-size: 18px;
+    align-content: center;
+    line-height: 1.42857;
+    color:#666565;
+ }
