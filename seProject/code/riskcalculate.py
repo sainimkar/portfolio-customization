@@ -2,11 +2,11 @@ import numpy as np
 from numpy import genfromtxt
 import pandas as pd
 from sklearn.preprocessing import Imputer
-from sklearn.model_selection import train_test_split
+from sklearn.cross_validation import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score
 import matplotlib.pyplot as plt
-records = genfromtxt(r'C:\se_project\training_data.txt', delimiter=',',dtype=float)
+records = genfromtxt(r'/home/sai/Portfolio-Customization-final/seProject/code', delimiter=',',dtype=float)
 x_axis = []
 y_axis = []
 unknown = np.array([[20,2,17731,0,14184.8],[33,4,55311,0,33186.6],[26,2,56410,26342.93,18785.07],[27,2,47000,21115.63103,16484.36897],[23,4,94611,11705.5136,45061.0864],[38,0,33955,4047.679342,29907.32066]])
